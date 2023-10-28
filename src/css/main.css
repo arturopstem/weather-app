@@ -1,0 +1,69 @@
+.weather-location p {
+  margin: 0;
+}
+
+.weather-location :is(hgroup, .headings) {
+  margin: 0;
+}
+
+#todays-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+#full-location {
+  display: flex;
+  justify-content: space-between;
+}
+
+#full-location p {
+  text-align: right;
+}
+
+.weather-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todays-temperature {
+  font-size: 4.5rem;
+}
+
+.todays-condition {
+  display: flex;
+}
+
+.forecast-day ul {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forecast-day li {
+  list-style: none;
+}
+
+.forecast-temperature {
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 576px) {
+  .weather-location {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #todays-date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #full-location {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

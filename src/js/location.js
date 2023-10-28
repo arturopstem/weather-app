@@ -14,9 +14,8 @@ async function search(e) {
     const forecastObject = await WeatherAPI.forecast(query);
     const forecastJSON = JSON.stringify(forecastObject);
     localStorage.setItem('forecast-object', forecastJSON);
-    // TODO: create location info
+    GUI.displayWeatherInfo(forecastObject);
     GUI.removeLoading(main);
-    // TODO: display location info
   }
 }
 

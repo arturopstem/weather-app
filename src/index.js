@@ -4,6 +4,7 @@ import * as Location from './js/location';
 import * as GUI from './js/GUI';
 
 GUI.initDegreeBtns();
+GUI.displayInitialInfo();
 
 const searchForm = document.querySelector('.search-form');
 searchForm.addEventListener('submit', Location.search);
