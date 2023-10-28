@@ -35,6 +35,7 @@ function degreeBtnsEventHandler(e) {
     const { degree } = button.dataset;
     localStorage.setItem('degree', degree);
     colorDegreeBtn(degree);
+    // TODO: display format and display location info
   }
 }
 
