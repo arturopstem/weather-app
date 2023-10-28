@@ -1,0 +1,15 @@
+.search-field {
+  --pill-radius: 9999px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) min-content;
+}
+
+#search-input {
+  border-top-left-radius: var(--pill-radius);
+  border-bottom-left-radius: var(--pill-radius);
+}
+
+#search-btn {
+  border-top-right-radius: var(--pill-radius);
+  border-bottom-right-radius: var(--pill-radius);
+}
