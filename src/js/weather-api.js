@@ -1,5 +1,5 @@
 const API_KEY = 'cc9bf0bb9b1d436f954212750232709';
-const BASE_URL = 'http://api.weatherapi.com/v1';
+const BASE_URL = 'https://api.weatherapi.com/v1';
 
 function filterUnique(locations) {
   const unique = new Map();
