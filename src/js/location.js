@@ -8,13 +8,14 @@ async function search(e) {
   const input = form.elements.namedItem('location');
   const ariaInvalid = input.getAttribute('aria-invalid');
   if (ariaInvalid === 'false') {
-    // TODO: show loading
+    const main = document.querySelector('.main');
+    GUI.showLoading(main);
     const query = input.value.trim();
     const forecastObject = await WeatherAPI.forecast(query);
     const forecastJSON = JSON.stringify(forecastObject);
     localStorage.setItem('forecast-object', forecastJSON);
     // TODO: create location info
-    // TODO: remove loading
+    GUI.removeLoading(main);
     // TODO: display location info
   }
 }
