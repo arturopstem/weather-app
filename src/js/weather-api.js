@@ -13,11 +13,24 @@ async function search(query) {
   const API = '/search.json';
   const call = `${BASE_URL}${API}?key=${API_KEY}&q=${query}`;
   const response = await fetch(call);
-  const locations = await response.json();
-  return filterUnique(locations);
+  const locationObjArray = await response.json();
+  return filterUnique(locationObjArray);
 }
 
-async function current(query) {
-  return query;
+async function realtime(query) {
+  const API = '/current.json';
+  const call = `${BASE_URL}${API}?key=${API_KEY}&q=${query}`;
+  const response = await fetch(call);
+  const currentObject = response.json();
+  return currentObject;
 }
-export { search, current };
+
+async function forecast(query) {
+  const API = '/forecast.json';
+  const call = `${BASE_URL}${API}?key=${API_KEY}&q=${query}&days=3&aqi=no&alerts=no`;
+  const response = await fetch(call);
+  const forecastObject = response.json();
+  return forecastObject;
+}
+
+export { search, realtime, forecast };
