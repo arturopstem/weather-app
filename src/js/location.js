@@ -1,5 +1,6 @@
 import * as WeatherAPI from './weather-api';
 import * as Datalist from './datalist';
+import * as GUI from './GUI';
 
 async function search(e) {
   e.preventDefault();
@@ -10,6 +11,7 @@ async function search(e) {
     // TODO: show loading
     // TODO: fetch location info (current and forecast)
     // TODO: create location info
+    // TODO: remove loading
     // TODO: display location info
   }
 }
